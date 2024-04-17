@@ -1,0 +1,24 @@
+.translated {
+    background-color: #121826d5;
+    width: 95%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #4D5562;
+}
+.innerLanguages {
+    display: flex;
+    gap: 20px;
+}
+.translatedLanguage {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.textResult {
+    height: 180px;
+    overflow-y: auto;
+}
+.TranslatedBottom {
+    display: flex;
+    gap: 10px;
+}

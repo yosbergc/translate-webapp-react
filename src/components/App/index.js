@@ -1,10 +1,12 @@
 import './App.css';
 import Logo from '../../svg/logo.svg'
 import { ToTranslate } from '../ToTranslate';
+import { Translated } from '../Translated';
 import React from 'react';
 function App() {
-  let [currentText, setCurrentText] = React.useState('');
+  let [currentText, setCurrentText] = React.useState('Hello, how are you');
   let [currentToTranslate, setCurrentToTranslate] = React.useState(0)
+  let [currentTranslated, setCurrentTranslated] = React.useState(1)
   let languageList = [
     {
       languageName: "English",
@@ -30,6 +32,7 @@ function App() {
       <section className='translateComponents'>
         
         <ToTranslate currentText={currentText} setCurrentText={setCurrentText} languageList={languageList} currentToTranslate={currentToTranslate} setCurrentToTranslate={setCurrentToTranslate}/>
+        <Translated languageList={languageList} currentTranslated={currentTranslated} setCurrentTranslated={setCurrentTranslated}/>
       </section>
     </section>
   );

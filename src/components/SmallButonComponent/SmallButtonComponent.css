@@ -10,3 +10,6 @@
     height: 20px;
     object-fit: cover;
 }
+button:hover {
+    cursor: pointer;
+}
