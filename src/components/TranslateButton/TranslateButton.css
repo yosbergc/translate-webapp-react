@@ -9,4 +9,10 @@
     border: 1px solid #a0b8ff;
     border-radius: 8px;
     font-size: 1rem;
+    transition: 0.3s ease-in-out;
+}
+.TranslateButton:hover {
+    cursor: pointer;
+    background-color: black;
+    border: 1px solid #4a4a4a;
 }

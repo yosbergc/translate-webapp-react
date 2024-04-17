@@ -1,0 +1,12 @@
+.smallButtonComponent {
+    background: none;
+    border: 2px solid #4D5562;
+    padding: 5px;
+    font-size: 0px;
+    border-radius: 8px;
+}
+.smallButtonComponent img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}

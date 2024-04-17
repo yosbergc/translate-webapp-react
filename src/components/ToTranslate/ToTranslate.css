@@ -20,3 +20,17 @@
 .text-container {
     border-top: 1px solid rgb(89, 89, 89);
 }
+.ToTranslateBottom {
+    display: flex;
+    justify-content: space-between;
+}
+.ToTranslateBottomRight {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.ToTranslateBottomLeft {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
