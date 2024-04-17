@@ -1,0 +1,22 @@
+.ToTranslate-Container {
+    background-color: #212936cf;
+    width: 95%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 16px;
+}
+.text-container textarea {
+    width: 100%;
+    background: none;
+    padding: 25px 0px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.text-container textarea:focus {
+    outline: none;
+}
+.text-container {
+    border-top: 1px solid rgb(89, 89, 89);
+}

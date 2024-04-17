@@ -7,3 +7,13 @@ header {
 header img {
     width: 200px;
 }
+.translateComponents {
+    display: grid;
+    justify-items: center;
+}
+@media (min-width: 1200px) {
+    .translateComponents {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
