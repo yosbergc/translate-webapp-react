@@ -5,8 +5,8 @@ import { Translated } from '../Translated';
 import React from 'react';
 function App() {
   let [currentText, setCurrentText] = React.useState('Hello, how are you');
-  let [currentToTranslate, setCurrentToTranslate] = React.useState(0)
-  let [currentTranslated, setCurrentTranslated] = React.useState(1)
+  let [currentToTranslate, setCurrentToTranslate] = React.useState(1)
+  let [currentTranslated, setCurrentTranslated] = React.useState(2)
   let languageList = [
     {
       languageName: "English",
