@@ -1,5 +1,6 @@
 import React from "react";
 let context = React.createContext();
+
 function TranslateContext({children}) {
 let [currentText, setCurrentText] = React.useState('Hello, how are you');
   let [currentToTranslate, setCurrentToTranslate] = React.useState(1)
@@ -33,19 +34,21 @@ let [currentText, setCurrentText] = React.useState('Hello, how are you');
     return languageList.find(language => language.ID === currentID).languageISOStandard;
   }
   function makeRequest() {
+    setIsLoading(true);
     try {
       let text = currentText.trim();
       let ToTranslateISO = getLanguageISO(currentToTranslate);
       let TranslatedISO = getLanguageISO(currentTranslated);
       setTranslatedText('')
-      setIsLoading(true);
       if (text.length === 0) {
         setIsLoading(false);
       } else {
         fetch(`${API_URL}?q=${text}&langpair=${ToTranslateISO}|${TranslatedISO}`)
         .then(res => res.json())
-        .then(data => setTranslatedText(data.responseData.translatedText))
-        setIsLoading(false);
+        .then(data => setTranslatedText(data.responseData.translatedText)).finally(() => {
+          setIsLoading(false);
+        })
+        
       }
     } catch(error) {
       console.error(error)

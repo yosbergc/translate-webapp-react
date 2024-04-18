@@ -1,7 +1,7 @@
 import './Loading.css'
 function Loading() {
     return (
-        <div class="loader"></div>
+        <div className="loader"></div>
     )
 }
 export {Loading}

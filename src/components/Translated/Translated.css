@@ -5,6 +5,7 @@
     padding: 20px;
     border-radius: 16px;
     border: 1px solid #4D5562;
+    max-height: 307px;
 }
 .innerLanguages {
     display: flex;
