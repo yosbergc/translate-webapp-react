@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/translate-webapp-react/static/css/main.02a70407.css",
+    "main.js": "/translate-webapp-react/static/js/main.5c297373.js",
+    "static/media/hero_img.jpg": "/translate-webapp-react/static/media/hero_img.536dc0c660a0895087e2.jpg",
+    "static/media/logo.svg": "/translate-webapp-react/static/media/logo.6c77836330cbdf859782cade8fadf2e0.svg",
+    "static/media/Horizontal_top_left_main.svg": "/translate-webapp-react/static/media/Horizontal_top_left_main.027b7ffd058473deefa9d9ac0ad889b2.svg",
+    "static/media/sound_max_fill.svg": "/translate-webapp-react/static/media/sound_max_fill.0cc9b5dd587722d838aa6bfcebfee91b.svg",
+    "index.html": "/translate-webapp-react/index.html",
+    "static/media/Copy.svg": "/translate-webapp-react/static/media/Copy.76366142a0564aa55f435abe8047fea9.svg",
+    "static/media/Sort_alfa.svg": "/translate-webapp-react/static/media/Sort_alfa.6f9cc1184823f7c641a6ad009ab632f1.svg",
+    "main.02a70407.css.map": "/translate-webapp-react/static/css/main.02a70407.css.map",
+    "main.5c297373.js.map": "/translate-webapp-react/static/js/main.5c297373.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02a70407.css",
+    "static/js/main.5c297373.js"
+  ]
+}
