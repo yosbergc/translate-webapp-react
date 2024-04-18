@@ -5,8 +5,11 @@ import { SmallButtonComponent } from '../SmallButonComponent'
 import { LanguageComponent } from '../LanguageComponent'
 import Sound from '../../svg/sound_max_fill.svg'
 import Copy from '../../svg/Copy.svg'
+import React from 'react'
+import { context } from '../Context/'
 
-function ToTranslate({currentText, setCurrentText, currentToTranslate, setCurrentToTranslate, languageList}) {
+function ToTranslate() {
+    let {currentText, setCurrentText, currentToTranslate, setCurrentToTranslate, languageList} = React.useContext(context);
     return (<section className="ToTranslate-Container">
         <section className="language-selector">
             <LanguageComponent currentToTranslate={currentToTranslate} name={"Detect Language"} setCurrentToTranslate={setCurrentToTranslate} toTranslateID={0}/>
