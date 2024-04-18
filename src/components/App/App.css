@@ -15,6 +15,5 @@ header img {
 @media (min-width: 1200px) {
     .translateComponents {
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
     }
 }

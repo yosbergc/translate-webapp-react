@@ -1,6 +1,7 @@
 import React from "react";
 import { SmallButtonComponent } from "../SmallButonComponent"
 import { LanguageComponent } from '../LanguageComponent'
+import { Loading } from '../Loading'
 import Change from '../../svg/Horizontal_top_left_main.svg'
 import Sound from '../../svg/sound_max_fill.svg';
 import Copy from '../../svg/Copy.svg'
@@ -8,7 +9,7 @@ import './Translated.css'
 import { context } from "../Context";
 
 function Translated() {
-    let {languageList, currentTranslated, setCurrentTranslated, SwipeLanguages, translatedText} = React.useContext(context);
+    let {languageList, currentTranslated, setCurrentTranslated, SwipeLanguages, translatedText, isLoading} = React.useContext(context);
     return (<section className="translated">
         <section className="language-selector translatedLanguage">
             <section className="innerLanguages">
@@ -26,6 +27,7 @@ function Translated() {
             }}/>
         </section>
         <section className="text-container">
+            {isLoading && <Loading/>}
             <p className="textResult">{translatedText}</p>
         </section>
         <section className="TranslatedBottom">

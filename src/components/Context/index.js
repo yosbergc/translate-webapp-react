@@ -5,6 +5,7 @@ let [currentText, setCurrentText] = React.useState('Hello, how are you');
   let [currentToTranslate, setCurrentToTranslate] = React.useState(1)
   let [currentTranslated, setCurrentTranslated] = React.useState(2)
   let [translatedText, setTranslatedText] = React.useState('')
+  let [isLoading, setIsLoading] = React.useState(false);
   const API_URL = 'https://api.mymemory.translated.net/get';
   let languageList = [
     {
@@ -35,13 +36,16 @@ let [currentText, setCurrentText] = React.useState('Hello, how are you');
     try {
       let text = currentText.trim();
       let ToTranslateISO = getLanguageISO(currentToTranslate);
-      let TranslatedISO = getLanguageISO(currentTranslated)
+      let TranslatedISO = getLanguageISO(currentTranslated);
+      setTranslatedText('')
+      setIsLoading(true);
       if (text.length === 0) {
-
+        setIsLoading(false);
       } else {
         fetch(`${API_URL}?q=${text}&langpair=${ToTranslateISO}|${TranslatedISO}`)
         .then(res => res.json())
         .then(data => setTranslatedText(data.responseData.translatedText))
+        setIsLoading(false);
       }
     } catch(error) {
       console.error(error)
@@ -57,7 +61,8 @@ let [currentText, setCurrentText] = React.useState('Hello, how are you');
         languageList,
         SwipeLanguages,
         translatedText,
-        makeRequest}}
+        makeRequest,
+        isLoading}}
         >
         {children}
     </context.Provider>)
