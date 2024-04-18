@@ -9,7 +9,7 @@ import React from 'react'
 import { context } from '../Context/'
 
 function ToTranslate() {
-    let {currentText, setCurrentText, currentToTranslate, setCurrentToTranslate, languageList} = React.useContext(context);
+    let {currentText, setCurrentText, currentToTranslate, setCurrentToTranslate, languageList, selectText} = React.useContext(context);
     return (<section className="ToTranslate-Container">
         <section className="language-selector">
             <LanguageComponent currentToTranslate={currentToTranslate} name={"Detect Language"} setCurrentToTranslate={setCurrentToTranslate} toTranslateID={0}/>
@@ -31,7 +31,7 @@ function ToTranslate() {
         <section className='ToTranslateBottom'>
             <div className='ToTranslateBottomLeft'>
                 <SmallButtonComponent imgSrc={Sound}/>
-                <SmallButtonComponent imgSrc={Copy}/>
+                <SmallButtonComponent imgSrc={Copy} onClick={selectText} state={currentText}/>
             </div>
             <div className='ToTranslateBottomRight'>
                 <CharacterCounter characterCount={currentText.length}/>

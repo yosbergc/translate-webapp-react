@@ -4,7 +4,7 @@ function TranslateContext({children}) {
 let [currentText, setCurrentText] = React.useState('Hello, how are you');
   let [currentToTranslate, setCurrentToTranslate] = React.useState(1)
   let [currentTranslated, setCurrentTranslated] = React.useState(2)
-  let [translatedText, setTranslatedText] = React.useState('')
+  let [translatedText, setTranslatedText] = React.useState('Bonjour, comment allez-vous')
   let [isLoading, setIsLoading] = React.useState(false);
   const API_URL = 'https://api.mymemory.translated.net/get';
   let languageList = [
@@ -51,6 +51,9 @@ let [currentText, setCurrentText] = React.useState('Hello, how are you');
       console.error(error)
     }
   }
+  async function selectText(state) {
+    await navigator.clipboard.writeText(state);
+  }
     return (<context.Provider value={
         {currentText,
         setCurrentText,
@@ -62,7 +65,8 @@ let [currentText, setCurrentText] = React.useState('Hello, how are you');
         SwipeLanguages,
         translatedText,
         makeRequest,
-        isLoading}}
+        isLoading,
+        selectText}}
         >
         {children}
     </context.Provider>)

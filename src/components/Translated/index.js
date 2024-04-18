@@ -9,7 +9,7 @@ import './Translated.css'
 import { context } from "../Context";
 
 function Translated() {
-    let {languageList, currentTranslated, setCurrentTranslated, SwipeLanguages, translatedText, isLoading} = React.useContext(context);
+    let {languageList, currentTranslated, setCurrentTranslated, SwipeLanguages, translatedText, isLoading, selectText} = React.useContext(context);
     return (<section className="translated">
         <section className="language-selector translatedLanguage">
             <section className="innerLanguages">
@@ -32,7 +32,7 @@ function Translated() {
         </section>
         <section className="TranslatedBottom">
             <SmallButtonComponent imgSrc={Sound}/>
-            <SmallButtonComponent imgSrc={Copy}/>
+            <SmallButtonComponent imgSrc={Copy} onClick={selectText} state={translatedText}/>
         </section>
     </section>)
 }
